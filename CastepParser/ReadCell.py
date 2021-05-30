@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 
-class CastepReader:
+class CastepFile:
     """
     A class to parse CASTEP file
 
