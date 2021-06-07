@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 
 
-class CastepReader:
+class CastepFile:
     """
     A class to parse CASTEP file
 
@@ -19,8 +19,20 @@ class CastepReader:
             Path object of the CASTEP file
         body : str
             Total string of the CASTEP file
+        final_energy: float
+            The last result of Final energy in .castep
+        atom_num: int
+            Total number of atoms
+        spec_num: int
+            Total number of species
+        area: float
+            Lattice surface area (XY plane)
+        lattice_param: Tuple(float, float, float)
+            lattice parameters
 
     Methods:
+        extract_pressure:
+            Extract pressure if computed
         extract_cell :
             Extract cell configuration
         extract_gamma:
